@@ -58,11 +58,9 @@
 ## 🚀 One-Command Deploy
 
 ```bash
-git clone https://github.com/shenu404/nexaura-veil.git
-cd nexaura-veil
-chmod +x deploy.sh
-sudo ./deploy.sh
+bash <(curl -Ls https://raw.githubusercontent.com/shenu404/nexaura-veil/main/install.sh)
 ```
+That's it — the script handles everything below automatically.
 
 The deploy script handles:
 - Node.js 20 install
