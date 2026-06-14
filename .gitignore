@@ -1,0 +1,34 @@
+# Dependencies
+node_modules/
+**/node_modules/
+
+# Build output
+frontend/dist/
+frontend/.vite/
+
+# Environment
+backend/.env
+**/.env.local
+
+# Database
+backend/data/*.db
+backend/data/*.db-wal
+backend/data/*.db-shm
+backend/data/backups/
+
+# Logs
+backend/logs/*.log
+**/*.log
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# PM2
+ecosystem.config.js.bak
