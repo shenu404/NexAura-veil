@@ -54,7 +54,7 @@ TMP_DIR="/tmp/nexaura-veil-install"
 
 log "Fetching NexAura Veil..."
 rm -rf "$TMP_DIR"
-git clone --depth=1 "$REPO" "$TMP_DIR" 2>/dev/null
+git clone --depth=1 "$REPO" "$TMP_DIR" 2>/dev/null || err "Failed to fetch source from $REPO — check the repo URL / that it's public"
 ok "Source fetched"
 
 # ── Hand off to deploy.sh ─────────────────────────────────────────────────────
