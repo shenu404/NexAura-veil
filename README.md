@@ -126,55 +126,6 @@ sudo certbot --nginx -d yourdomain.com
 
 ---
 
-## 📁 Project Structure
-
-```
-nexaura-veil/
-├── backend/
-│   ├── src/
-│   │   ├── index.js              # Express entry point
-│   │   ├── routes/
-│   │   │   ├── auth.js           # Login / JWT
-│   │   │   ├── inbounds.js       # Inbound CRUD
-│   │   │   ├── clients.js        # Client CRUD
-│   │   │   ├── xray.js           # Xray control + sub links
-│   │   │   ├── iplimit.js        # IP ban/unban/logs
-│   │   │   └── server.js         # System stats
-│   │   ├── services/
-│   │   │   ├── xrayConfig.js     # Config generation
-│   │   │   ├── xrayService.js    # Process management
-│   │   │   ├── xrayApiService.js # gRPC-style API calls
-│   │   │   ├── statsPoller.js    # Traffic polling (30s)
-│   │   │   └── ipLimitService.js # IP enforcement engine
-│   │   ├── models/database.js    # SQLite schema + helpers
-│   │   ├── middleware/auth.js    # JWT middleware
-│   │   └── utils/logger.js
-│   ├── .env.example
-│   └── package.json
-├── frontend/
-│   ├── src/
-│   │   ├── pages/
-│   │   │   ├── DashboardPage.jsx
-│   │   │   ├── InboundsPage.jsx
-│   │   │   ├── ClientsPage.jsx
-│   │   │   ├── TrafficPage.jsx
-│   │   │   ├── IPLimitPage.jsx   # IP ban management
-│   │   │   ├── LogsPage.jsx
-│   │   │   └── SettingsPage.jsx
-│   │   ├── components/
-│   │   │   ├── layout/Layout.jsx
-│   │   │   └── LoadingScreen.jsx # Animated boot screen
-│   │   ├── hooks/useAuth.jsx
-│   │   └── lib/api.js
-│   └── package.json
-├── deploy.sh        # One-command VPS deploy
-├── nginx.conf       # Nginx template
-├── ecosystem.config.js  # PM2 config
-└── README.md
-```
-
----
-
 ## 🔑 Default Login
 
 | | |
